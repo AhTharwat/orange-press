@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="press.css">
+    <title>Press</title>
+</head>
+<body>
+    <div class="main-dev">
+        <div class="header">
+            <img src="/assets/orange_logo.svg" alt="orange" class="orange-logo">
+            <div >
+            </div>
+        </div>
+        <div class="first-block">
+            <div class="first-block-content">
+                <h1 class="first-block-title">Ils parlent de nous ...</h1>
+                <h2 class="first-block-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia magnam aspernatur qui commodi fuga quas aperiam quod pariatur.</h2>
+            </div>
+        </div>
+        <div class="articles-block">
+            <% for (const article of articles) { %>
+                <div class="article">
+                    <img src="http://localhost:1337<%=article.image.formats.thumbnail.url%>" alt="">
+                    <div class="article-content">
+                        <h2> << <%=article.title%> >> </h2>
+                        <p><%= article.description %></p>
+                        <button> <b>Click here!</b> </button>
+                    </div>
+                </div>    
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
